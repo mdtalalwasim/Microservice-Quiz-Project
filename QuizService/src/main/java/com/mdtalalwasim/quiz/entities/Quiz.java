@@ -3,6 +3,8 @@ package com.mdtalalwasim.quiz.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "quizs")
 @Setter
@@ -17,4 +19,6 @@ public class Quiz {
     private Long id;
     private String title;
     private String description;
+
+    transient private List<Question> questions;
 }
